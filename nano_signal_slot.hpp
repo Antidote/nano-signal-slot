@@ -27,8 +27,8 @@ class Observer
 
    ~Observer()
     {
-        auto iter = std::cbegin(tracked_connections);
-        auto stop = std::cend(tracked_connections);
+        auto iter = tracked_connections.cbegin();
+        auto stop = tracked_connections.cend();
 
         while (iter != stop)
         {
